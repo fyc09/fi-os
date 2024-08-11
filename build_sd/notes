@@ -1,0 +1,39 @@
+=====
+Index
+=====
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+0000  63 65 73 68 69 73 68 75 6A 75 00 00 02 00 00 00  ceshishuju......
+0010  00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00  -----------.....
+
+This means file "ceshishuju" starts at 0x0000000200 (address is little endian),
+ends at 0x00000003ff, which is It is obtained by subtracting one from the
+address of the next file. The character '\0' (0x00) is used to fill the files'
+name if the names are less than 11 characters long. Note that a file with empty
+name marks the end of index.
+
+====
+File
+====
+
+       00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+00000  7A 68 69 7A 68 65 6E 67 3A 05 10 00 00 00 68 61  zhizheng:.....ha
+00010  73 68 75 6A 75 6D 75 62 69 61 6F 73 68 75 6A 75  shujumubiaoshuju  
+
+This file has a pointer at 0x000009:0x00000D. Now the pointer refers to
+0x001005, which is the address of "mubiaoshuju". This file will be written
+into the SD card at a new address, which will never be zero, so the pointer will
+not refer to the real address where the target locates. If we mark address
+0x000009 as a placeholder, then the fs maker will correct this.
+
+Assume that the file is written at 0x020000, then the file will be like the
+following, changing "05 10 00 00 00" (0x0000001005) into "05 10 20 00 00"
+(0x0000201005).
+
+    0x0000201005  = 0x0000001005 + 0x020000
+    |               |              |
+    Final address   Offset         File address
+
+       00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+00000  7A 68 69 7A 68 65 6E 67 3A 05 10 20 00 00 68 61  zhizheng:.....ha
+00010  73 68 75 6A 75 6D 75 62 69 61 6F 73 68 75 6A 75  shujumubiaoshuju  

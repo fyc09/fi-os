@@ -63,7 +63,6 @@ bool readUntil(uint8_t token) {
     uint8_t count = 0xff;
     while (count > 0) {
         uint8_t t = fiInterface_SD_read();
-        // printf("Got 0x%02x Expect 0x%02x\n", t, token);
         if (t == token) {
             break;
         }
@@ -80,23 +79,23 @@ bool readUntil(uint8_t token) {
 uint8_t fiDriver_SD_init(void) {
     // Give 80 clocks to SD card.
     for (uint8_t i = 0; i <= 9; i++) {
-        fiInterface_SD_write(0xff);
+        fiInterface_SD_sendDummy();
     }
 
     // Try to send CMD0. Fail after 255 times.
     sendCmd(SD_CMD_GO_IDLE_STATE, 0, 0x95);
     if (!readUntil(0x01)) {
-        return -1;
+        return 1;
     }
 
     sendCmd(SD_CMD_SEND_IF_COND, 0x1aa, 0x01);
     if (!readUntil(0xaa)) {
-        return -2;
+        return 2;
     }
 
     sendCmd(SD_CMD_APP_CMD, 0, 0x01);
     if (!readUntil(0x01)) {
-        return -3;
+        return 3;
     }
 
     do {
@@ -104,6 +103,11 @@ uint8_t fiDriver_SD_init(void) {
         readByte();
         sendCmd(SD_CMD_APP_CMD, 0, 0xff);
     } while (!readUntil(0x00));
+
+    fiInterface_SD_sendDummy();
+
+    sendCmd(SD_CMD_SET_BLOCKLEN, 512, 0xff);
+    readByte();
 
     return 0;
 }

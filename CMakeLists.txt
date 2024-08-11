@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(fi_os)
 
+set (CMAKE_VERBOSE_MAKEFILEON ON)
+
 file(GLOB SOURCES 
     "${PROJECT_SOURCE_DIR}/driver/*.c"
     "${PROJECT_SOURCE_DIR}/interface/*.c"

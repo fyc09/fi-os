@@ -4,14 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define SIZE 16
-#define XLevelL 0x02
-#define XLevelH 0x10
-#define OLED_WIDTH 128
-#define OLED_HEIGHT 64
-#define Brightness 0xff
 #define X_WIDTH 128
-#define Y_WIDTH 64
 
 void write(uint8_t data, bool dc) {
     fiInterface_OLED_set_DC(dc);

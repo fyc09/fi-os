@@ -59,5 +59,8 @@ int main() {
 
     printf("%d\n", buffer[0]);
 
+    fiDriver_OLED_clear();
+    fiDriver_OLED_showStr(0, 0, "Hello World!", BIG, REVERSED);
+
     return 0;
 }

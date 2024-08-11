@@ -15,8 +15,6 @@
 uint8_t KeyBoard_Rn[] = {22, 23, 24, 25};
 uint8_t KeyBoard_Cn[] = {21, 29, 28, 27};
 
-#define _SPI_write(data, cs, sclk, mosi)
-
 uint8_t fiInterface_System_init(void) {
     uint8_t code = wiringPiSetup();
     if (code != 0) {
