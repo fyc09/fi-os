@@ -15,7 +15,7 @@
 uint8_t KeyBoard_Rn[] = {22, 23, 24, 25};
 uint8_t KeyBoard_Cn[] = {21, 29, 28, 27};
 
-uint8_t fiInterface_System_init(void) {
+uint8_t fi_inter_System_init(void) {
     uint8_t code = wiringPiSetup();
     if (code != 0) {
         return code;
@@ -52,7 +52,7 @@ uint8_t fiInterface_System_init(void) {
     return 0;
 }
 
-void fiInterface_OLED_write(uint8_t data) {
+void fi_inter_OLED_write(uint8_t data) {
     digitalWrite(OLED_CS, LOW);
     for (int i = 0; i < 8; i++) {
         digitalWrite(OLED_SCLK, LOW);
@@ -67,7 +67,7 @@ void fiInterface_OLED_write(uint8_t data) {
     digitalWrite(OLED_CS, HIGH);
 }
 
-void fiInterface_OLED_set_DC(bool dc) {
+void fi_inter_OLED_set_DC(bool dc) {
     if (dc) {
         digitalWrite(OLED_DC, HIGH);
     } else {
@@ -75,7 +75,7 @@ void fiInterface_OLED_set_DC(bool dc) {
     }
 }
 
-void fiInterface_OLED_reset(void) {
+void fi_inter_OLED_reset(void) {
     digitalWrite(OLED_RST, HIGH);
     delay(100);
     digitalWrite(OLED_RST, LOW);
@@ -83,11 +83,11 @@ void fiInterface_OLED_reset(void) {
     digitalWrite(OLED_RST, HIGH);
 }
 
-void fiInterface_OLED_cleanup(void) {
-    fiInterface_OLED_reset();
+void fi_inter_OLED_cleanup(void) {
+    fi_inter_OLED_reset();
 }
 
-void fiInterface_SD_write(uint8_t data) {
+void fi_inter_SD_write(uint8_t data) {
     digitalWrite(SD_CS, LOW);
     for (int i = 0; i < 8; i++) {
         digitalWrite(SD_SCLK, LOW);
@@ -102,7 +102,7 @@ void fiInterface_SD_write(uint8_t data) {
     digitalWrite(SD_CS, HIGH);
 }
 
-uint8_t fiInterface_SD_read(void) {
+uint8_t fi_inter_SD_read(void) {
     uint8_t data = 0;
     digitalWrite(SD_CS, LOW);
     for (int i = 0; i < 8; i++) {
@@ -119,9 +119,9 @@ uint8_t fiInterface_SD_read(void) {
     return data;
 }
 
-void fiInterface_SD_cleanup(void) {}
+void fi_inter_SD_cleanup(void) {}
 
-void fiInterface_SD_sendDummy(void) {
+void fi_inter_SD_sendDummy(void) {
     digitalWrite(SD_MOSI, HIGH);
     for (int i = 0; i < 8; i++) {
         digitalWrite(SD_SCLK, LOW);
@@ -129,7 +129,7 @@ void fiInterface_SD_sendDummy(void) {
     }
 }
 
-void fiInterface_Keyboard_setRow(uint8_t row, bool state) {
+void fi_inter_Keyboard_setRow(uint8_t row, bool state) {
     if (state) {
         digitalWrite(KeyBoard_Rn[row], HIGH);
     } else {
@@ -137,6 +137,6 @@ void fiInterface_Keyboard_setRow(uint8_t row, bool state) {
     }
 }
 
-bool fiInterface_Keyboard_getCol(uint8_t col) {
+bool fi_inter_Keyboard_getCol(uint8_t col) {
     return (bool *)!digitalRead(KeyBoard_Cn[col]);
 }

@@ -1,15 +1,12 @@
 #include "oled.h"
-#include "font.h"
 #include "interface.h"
 #include <stdbool.h>
 #include <stdint.h>
 
-#define X_WIDTH 128
-
 void write(uint8_t data, bool dc) {
-    fiInterface_OLED_set_DC(dc);
-    fiInterface_OLED_write(data);
-    fiInterface_OLED_set_DC(true);
+    fi_inter_OLED_set_DC(dc);
+    fi_inter_OLED_write(data);
+    fi_inter_OLED_set_DC(true);
 }
 
 void setPositon(uint8_t x, uint8_t y) {
@@ -18,8 +15,8 @@ void setPositon(uint8_t x, uint8_t y) {
     write((x & 0x0f) | 0x01, CMD);
 }
 
-void fiDriver_OLED_init() {
-    fiInterface_OLED_reset();
+void fi_OLED_init() {
+    fi_inter_OLED_reset();
 
     write(0xae, CMD);
     write(0x00, CMD);
@@ -52,7 +49,7 @@ void fiDriver_OLED_init() {
     write(0xaf, CMD);
 }
 
-void fiDriver_OLED_setDisplay(bool on) {
+void fi_OLED_setDisplay(bool on) {
     write(0X8D, CMD); // SET DCDC
     if (on) {
         write(0X14, CMD); // DCDC ON
@@ -63,68 +60,81 @@ void fiDriver_OLED_setDisplay(bool on) {
     }
 }
 
-void showChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t size, bool mode) {
+void showChar(uint8_t x, uint8_t y, uint8_t *bitmap, fi_OLED_size_t size, bool reversed) {
     y /= 8;
-    if (size != HANZI) {
-        chr -= ' ';
+    for (uint8_t offset_y = 0; offset_y < size.height; offset_y += 8) {
+        setPositon(x, y + offset_y);
+        for (uint8_t offset_x = 0; offset_x < size.width; offset_x++) {
+            if (reversed) {
+                write(~*bitmap, DATA);
+            } else {
+                write(*bitmap, DATA);
+            }
+            bitmap++;
+        }
     }
 
-    if (mode == NORMAL) {
-        if (size == BIG) {
-            setPositon(x, y);
-            for (uint8_t i = 0; i < 8; i++) {
-                write(F8X16[chr][i], DATA);
-            }
-            setPositon(x, y + 1);
-            for (uint8_t i = 0; i < 8; i++) {
-                write(F8X16[chr][i + 8], DATA);
-            }
-        } else {
-            setPositon(x, y);
-            for (uint8_t i = 0; i < 6; i++) {
-                write(F6X16[chr][i], DATA);
-            }
-            setPositon(x, y + 1);
-            for (uint8_t i = 0; i < 6; i++) {
-                write(F6X16[chr][i + 6], DATA);
-            }
-        }
-    } else {
-        if (size == BIG) {
-            setPositon(x, y);
-            for (uint8_t i = 0; i < 8; i++) {
-                write(~F8X16[chr][i], DATA);
-            }
-            setPositon(x, y + 1);
-            for (uint8_t i = 0; i < 8; i++) {
-                write(~F8X16[chr][i + 8], DATA);
-            }
-        } else {
-            setPositon(x, y);
-            for (uint8_t i = 0; i < 6; i++) {
-                write(~F6X16[chr][i] & 0xf0, DATA);
-            }
-            setPositon(x, y + 1);
-            for (uint8_t i = 0; i < 6; i++) {
-                write(~F6X16[chr][i + 6], DATA);
-            }
-        }
-    }
+    // if (size != HANZI) {
+    //     chr -= ' ';
+    // }
+
+    // if (mode == NORMAL) {
+    //     if (size == BIG) {
+    //         setPositon(x, y);
+    //         for (uint8_t i = 0; i < 8; i++) {
+    //             write(F8X16[chr][i], DATA);
+    //         }
+    //         setPositon(x, y + 1);
+    //         for (uint8_t i = 0; i < 8; i++) {
+    //             write(F8X16[chr][i + 8], DATA);
+    //         }
+    //     } else {
+    //         setPositon(x, y);
+    //         for (uint8_t i = 0; i < 6; i++) {
+    //             write(F6X16[chr][i], DATA);
+    //         }
+    //         setPositon(x, y + 1);
+    //         for (uint8_t i = 0; i < 6; i++) {
+    //             write(F6X16[chr][i + 6], DATA);
+    //         }
+    //     }
+    // } else {
+    //     if (size == BIG) {
+    //         setPositon(x, y);
+    //         for (uint8_t i = 0; i < 8; i++) {
+    //             write(~F8X16[chr][i], DATA);
+    //         }
+    //         setPositon(x, y + 1);
+    //         for (uint8_t i = 0; i < 8; i++) {
+    //             write(~F8X16[chr][i + 8], DATA);
+    //         }
+    //     } else {
+    //         setPositon(x, y);
+    //         for (uint8_t i = 0; i < 6; i++) {
+    //             write(~F6X16[chr][i] & 0xf0, DATA);
+    //         }
+    //         setPositon(x, y + 1);
+    //         for (uint8_t i = 0; i < 6; i++) {
+    //             write(~F6X16[chr][i + 6], DATA);
+    //         }
+    //     }
+    // }
 }
 
-void fiDriver_OLED_showStr(uint8_t x, uint8_t y, char *chr, uint8_t size, bool mode) {
-    while (*chr != '\0') {
-        showChar(x, y, *chr, size, mode);
-        x += size;
-        if (x > (X_WIDTH - size)) {
-            x = 0;
-            y += 2;
-        }
-        chr++;
-    }
-}
+// void showChar(uint8_t x, uint8_t y, uint8_t *bitmap, fi_OLED_size_t size, bool reversed) {
+// void fi_OLED_showStr(uint8_t x, uint8_t y, char *chr, uint8_t size, bool mode) {
+//     while (*chr != '\0') {
+//         showChar(x, y, *chr, size, mode);
+//         x += size;
+//         if (x > (X_WIDTH - size)) {
+//             x = 0;
+//             y += 2;
+//         }
+//         chr++;
+//     }
+// }
 
-void fiDriver_OLED_drawPic(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t *pic) {
+void fi_OLED_drawPic(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t *pic) {
     y /= 8;
     height /= 8;
 
@@ -137,7 +147,7 @@ void fiDriver_OLED_drawPic(uint8_t x, uint8_t y, uint8_t width, uint8_t height, 
     }
 }
 
-void fiDriver_OLED_clear(void) {
+void fi_OLED_clear(void) {
     for (uint8_t i = 0; i < 8; i++) {
         write(0xb0 + i, CMD);
         write(0x00, CMD);

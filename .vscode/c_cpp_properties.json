@@ -10,8 +10,7 @@
             ],
             "defines": ["_DEBUG", "UNICODE", "_UNICODE", "sfr=bool", "sbit=bool"],
             "cStandard": "c23",
-            "cppStandard": "gnu++23",
-            "compilerPath": "D:\\SDCC\\bin\\sdcc.exe"
+            "cppStandard": "gnu++23"
         }
     ],
     "version": 4

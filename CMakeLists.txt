@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 3.10)
 
 project(fi_os)
 
-set (CMAKE_VERBOSE_MAKEFILEON ON)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 file(GLOB SOURCES 
     "${PROJECT_SOURCE_DIR}/driver/*.c"

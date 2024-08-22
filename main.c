@@ -1,66 +1,77 @@
+#include "interface.h"
 #include "keyboard.h"
 #include "oled.h"
 #include "sd.h"
-#include "interface.h"
 #include "system.h"
-#include "wiringPi.h"
 #include <stdio.h>
-
-uint8_t pic[][16] = {
-    {0x00, 0x00, 0x00, 0x00, 0x1C, 0x7E, 0xFE, 0xFE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFE,
-     0xFC},
-    {0xFC, 0xFE, 0xFE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xFE, 0x7E, 0x0C, 0x00, 0x00, 0x00,
-     0x00},
-    {0x00, 0x00, 0x00, 0x00, 0x00, 0xC0, 0xF1, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-     0xFF},
-    {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFB, 0xF1, 0x80, 0x00, 0x00, 0x00, 0x00,
-     0x00},
-    {0x00, 0x00, 0x00, 0x00, 0x3F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-     0xFF},
-    {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFD, 0xFF, 0x3F, 0x00, 0x00, 0x00,
-     0x00},
-    {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x0F, 0x0F, 0x1F, 0x1F, 0x3F, 0x7F, 0x7F, 0xFF,
-     0xFF},
-    {0xFF, 0xFF, 0x7F, 0x7F, 0x3F, 0x1F, 0x1F, 0x0F, 0x0F, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00,
-     0x00},
-};
 
 int main() {
     uint8_t code;
 
-    if ((code = fiSystem_init())) {
+    if ((code = fi_system_init())) {
         return code;
     }
 
-    uint8_t *buffer = fiDriver_SD_readBlock(1);
-    buffer[0] = 0xaf;
-    buffer[1] = 0xe3;
-    if (!fiDriver_SD_writeBlock(1, buffer)) {
-        printf("Failed to write block\n");
-        return 0;
+    fi_OLED_init();
+    fi_OLED_setDisplay(ON);
+    fi_OLED_clear();
+
+    // fi_OLED_showStr(0, 0, "Hello, world!", SMALL, NORMAL);
+    // fi_OLED_showStr(0, 16, "Hello, world!", SMALL, REVERSED);
+    // fi_OLED_showStr(0, 32, "Hello, world!", BIG, NORMAL);
+    // fi_OLED_showStr(0, 48, "Hello, world!", BIG, REVERSED);
+
+    // if ((code = fi_file_open("gzcnfont"))) {
+    //
+    //     return code;
+    // }
+
+    // uint8_t buffer[16];
+    // if ((code = fi_SD_Reader_read(16, buffer))) {
+    //
+    //     return code;
+    // }
+
+    // for (int i = 0; i < 16; i++) {
+    //
+    // }
+
+    // if ((code = fi_SD_Reader_close())) {
+    //
+    //     return code;
+    // }
+
+    // if ((code = fi_file_open("gzcnfont"))) {
+    //
+    //     return code;
+    // }
+
+    // if ((code = fi_SD_Reader_read(16, buffer))) {
+    //
+    //     return code;
+    // }
+
+    // for (int i = 0; i < 16; i++) {
+    //
+    // }
+
+    return fi_font_write("西安交通大学是我国最早兴办、享誉海内外的著名高等学府。", 0, 0,
+                         FI_FONT_SIMSUN, REVERSED);
+    // return 0;
+
+    uint8_t status;
+    uint8_t buffer[512];
+    for (;;) {
+        if ((status = fi_SD_read(0, 0, 512, buffer))) {
+            return status;
+        }
+        for (int i = 0; i < 512; i++) {
+            if (buffer[i] != 0xaa) {
+                printf("%d ", buffer[i]);
+            }
+        }
+        printf("\n");
     }
-    printf("Wrote block\n");
-
-    buffer = fiDriver_SD_readBlock(0);
-
-    if (!buffer) {
-        printf("Failed to read block 1\n");
-        return 0;
-    }
-
-    printf("%x\n", buffer[0]);
-
-    buffer = fiDriver_SD_readBlock(1);
-
-    if (!buffer) {
-        printf("Failed to read block 2\n");
-        return 0;
-    }
-
-    printf("%d\n", buffer[0]);
-
-    fiDriver_OLED_clear();
-    fiDriver_OLED_showStr(0, 0, "Hello World!", BIG, REVERSED);
 
     return 0;
 }

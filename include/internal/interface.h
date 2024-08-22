@@ -13,7 +13,7 @@
  *  ====================
  */
 
-uint8_t fiInterface_System_init(void);
+uint8_t fi_inter_System_init(void);
 
 /**
  *  ==================
@@ -21,13 +21,13 @@ uint8_t fiInterface_System_init(void);
  *  ==================
  */
 
-void fiInterface_OLED_write(uint8_t data);
+void fi_inter_OLED_write(uint8_t data);
 
-void fiInterface_OLED_set_DC(bool dc);
+void fi_inter_OLED_set_DC(bool dc);
 
-void fiInterface_OLED_reset(void);
+void fi_inter_OLED_reset(void);
 
-void fiInterface_OLED_cleanup(void);
+void fi_inter_OLED_cleanup(void);
 
 /**
  *  =====================
@@ -35,13 +35,13 @@ void fiInterface_OLED_cleanup(void);
  *  =====================
  */
 
-void fiInterface_SD_write(uint8_t data);
+void fi_inter_SD_write(uint8_t data);
 
-uint8_t fiInterface_SD_read(void);
+uint8_t fi_inter_SD_read(void);
 
-void fiInterface_SD_cleanup(void);
+void fi_inter_SD_cleanup(void);
 
-void fiInterface_SD_sendDummy(void);
+void fi_inter_SD_sendDummy(void);
 
 /**
  *  ======================
@@ -49,8 +49,8 @@ void fiInterface_SD_sendDummy(void);
  *  ======================
  */
 
-void fiInterface_Keyboard_setRow(uint8_t row, bool state);
+void fi_inter_Keyboard_setRow(uint8_t row, bool state);
 
-bool fiInterface_Keyboard_getCol(uint8_t col);
+bool fi_inter_Keyboard_getCol(uint8_t col);
 
 #endif

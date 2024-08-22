@@ -28,8 +28,17 @@
 #define SD_ACMD_SEND_OP_COND 41      /* CMD41 = 0x69 */
 #define SD_CMD_APP_CMD 55            /* CMD55 = 0x77 */
 
+struct {
+    uint32_t block;
+    uint16_t offset;
+    enum {
+        STATUS_READING,
+        STATUS_READY,
+    } status;
+} state;
+
 void send(uint8_t byte) {
-    fiInterface_SD_write(byte);
+    fi_inter_SD_write(byte);
 }
 
 void sendCmd(uint8_t cmd, uint32_t arg, uint8_t crc) {
@@ -51,18 +60,25 @@ void sendCmd(uint8_t cmd, uint32_t arg, uint8_t crc) {
 
 uint8_t readByte() {
     uint8_t res = 0xff;
-    uint8_t count = 0xff;
+    uint8_t count = 0x0f;
     while (res == 0xff && count > 0) {
-        res = fiInterface_SD_read();
+        res = fi_inter_SD_read();
         count--;
     }
+    return res;
+}
+
+uint8_t readRaw() {
+    // return fi_inter_SD_read();
+    uint8_t res = fi_inter_SD_read();
+    // printf("%02x ", res);
     return res;
 }
 
 bool readUntil(uint8_t token) {
     uint8_t count = 0xff;
     while (count > 0) {
-        uint8_t t = fiInterface_SD_read();
+        uint8_t t = fi_inter_SD_read();
         if (t == token) {
             break;
         }
@@ -76,10 +92,13 @@ bool readUntil(uint8_t token) {
     return true;
 }
 
-uint8_t fiDriver_SD_init(void) {
+uint8_t fi_SD_init(void) {
     // Give 80 clocks to SD card.
     for (uint8_t i = 0; i <= 9; i++) {
-        fiInterface_SD_sendDummy();
+        fi_inter_SD_sendDummy();
+    }
+    for (uint8_t i = 0; i <= 9; i++) {
+        send(0xFF);
     }
 
     // Try to send CMD0. Fail after 255 times.
@@ -104,62 +123,214 @@ uint8_t fiDriver_SD_init(void) {
         sendCmd(SD_CMD_APP_CMD, 0, 0xff);
     } while (!readUntil(0x00));
 
-    fiInterface_SD_sendDummy();
+    fi_inter_SD_sendDummy();
 
     sendCmd(SD_CMD_SET_BLOCKLEN, 512, 0xff);
     readByte();
 
+    state.status = STATUS_READY;
+
     return 0;
 }
 
-uint8_t buffer[512];
+uint8_t fi_SD_writeBlock(uint32_t block, uint8_t *data, uint8_t length) {
+    uint8_t status;
 
-uint8_t *fiDriver_SD_readBlock(uint32_t block) {
-    sendCmd(SD_CMD_READ_SINGLE_BLOCK, block, 0xff);
-    if (!readUntil(0x00)) {
-        return NULL;
-    }
-    if (!readUntil(0xFE)) {
-        return NULL;
+    if ((status = fi_SD_init())) {
+        return status;
     }
 
-    for (int i = 0; i < 512; i++) {
-        buffer[i] = readByte();
+    if (state.status != STATUS_READY) {
+        return 1;
     }
 
-    // 2 CRC bytes. Ignore.
-    readByte();
-    readByte();
+    if (length > 512) {
+        return 2;
+    }
 
-    fiInterface_SD_sendDummy();
-
-    fiInterface_SD_sendDummy();
-    send(0xff);
-    readUntil(0x00);
-    readUntil(0xff);
-
-    return buffer;
-}
-
-bool fiDriver_SD_writeBlock(uint32_t block, uint8_t *data) {
     sendCmd(SD_CMD_WRITE_SINGLE_BLOCK, block, 0xff);
     if (!readUntil(0x00)) {
-        return false;
+        return 3;
     }
 
     send(0xFE);
-    for (int i = 0; i < 512; i++) {
+    for (int i = 0; i < length; i++) {
         send(data[i]);
+    }
+
+    for (int i = 0; i < 512 - length; i++) {
+        send(0x00);
     }
 
     // 2 CRC bytes. Ignore.
     readByte();
     readByte();
 
-    fiInterface_SD_sendDummy();
+    fi_inter_SD_sendDummy();
     send(0xff);
     readUntil(0x00);
     readUntil(0xff);
 
-    return true;
+    return 0;
+}
+
+uint8_t startReadCmd(uint32_t block) {
+    uint8_t status;
+    if ((status = fi_SD_init())) {
+        return status;
+    }
+
+    sendCmd(SD_CMD_READ_SINGLE_BLOCK, block, 0xff);
+    if (!readUntil(0x00)) {
+        return 1;
+    }
+    if (!readUntil(0xFE)) {
+        return 2;
+    }
+}
+
+uint8_t endReadCmd() {
+    // 2 CRC bytes. Ignore.
+
+    readByte();
+    readByte();
+
+    fi_inter_SD_sendDummy();
+
+    fi_inter_SD_sendDummy();
+    send(0xff);
+    readUntil(0x00);
+    readUntil(0xff);
+
+    return 0;
+}
+
+uint8_t fi_SD_Reader_init(uint32_t block, uint16_t offset) {
+    uint8_t status = 0;
+
+    if (state.status != STATUS_READY) {
+        return 1;
+    }
+
+    while (offset >= 512) {
+        offset -= 512;
+        block++;
+    }
+
+    state.block = block;
+    state.offset = offset;
+
+    if ((status = startReadCmd(block))) {
+        return status;
+    }
+
+    while (offset > 0) {
+        readRaw();
+        offset--;
+    }
+
+    state.status = STATUS_READING;
+
+    return 0;
+}
+
+uint8_t fi_SD_Reader_read(uint32_t length, uint8_t *buffer) {
+    uint8_t status = 0;
+    bool isEmpty = buffer == NULL;
+
+    if (state.status != STATUS_READING) {
+        return 1;
+    }
+
+    while (length > 0) {
+        state.offset++;
+        if (!isEmpty) {
+            *buffer = readRaw();
+            buffer++;
+        } else {
+            readRaw();
+        }
+        length--;
+
+        if (state.offset == 512) {
+            state.offset = 0;
+            state.block++;
+
+            if ((status = endReadCmd())) {
+                return status;
+            }
+
+            if ((status = startReadCmd(state.block))) {
+                return status;
+            }
+
+            state.status = STATUS_READING;
+        }
+    }
+
+    return 0;
+}
+
+uint8_t fi_SD_Reader_jump(uint8_t *ptr) {
+    uint8_t status = 0;
+
+    uint32_t block = *(uint32_t *)(ptr + 1) >> 1;
+    uint16_t offset = *(uint16_t *)ptr & 0x1ff;
+
+    if (offset < 5) {
+        block -= 1;
+        offset += 512 - 5;
+    } else {
+        offset -= 5;
+    }
+
+    uint32_t targetBlock = state.block + block;
+    uint16_t targetOffset = state.offset + offset;
+
+    while (targetOffset >= 512) {
+        targetOffset -= 512;
+        targetBlock++;
+    }
+
+    if ((status = fi_SD_Reader_close())) {
+        return status;
+    }
+
+    if ((status = fi_SD_Reader_init(targetBlock, targetOffset))) {
+        return status;
+    }
+
+    return 0;
+}
+
+uint8_t fi_SD_Reader_close() {
+
+    uint8_t status = 0;
+
+    if (state.status != STATUS_READING) {
+        return 0;
+    }
+
+    while (state.offset < 512) {
+        state.offset++;
+        readRaw();
+    }
+
+    state.status = STATUS_READY;
+
+    return endReadCmd();
+}
+
+uint8_t fi_SD_read(uint32_t block, uint16_t offset, uint32_t length, uint8_t *buffer) {
+    uint8_t status = 0;
+
+    if ((status = fi_SD_Reader_init(block, offset))) {
+        return status;
+    }
+
+    if ((status = fi_SD_Reader_read(length, buffer))) {
+        return status;
+    }
+
+    return fi_SD_Reader_close();
 }
