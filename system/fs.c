@@ -1,9 +1,9 @@
-#include "sd.h"
-#include "system.h"
 #include <stdint.h>
 #include <string.h>
+#include "sd.h"
+#include "system.h"
 
-uint8_t fi_file_open(const char *filename) {
+uint8_t fi_file_open(const char* filename) {
     uint8_t status;
 
     uint8_t length = strlen(filename);
@@ -14,7 +14,9 @@ uint8_t fi_file_open(const char *filename) {
     uint8_t record[16];
     uint8_t i;
 
+    printf(";;;\n");
     if ((status = fi_SD_Reader_init(0, 0))) {
+    printf("%d", status);
         return status;
     }
 

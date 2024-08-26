@@ -1,6 +1,6 @@
 #include "sd.h"
-#include "interface.h"
 #include <stddef.h>
+#include "interface.h"
 
 #define SD_CMD_GO_IDLE_STATE 0       /* CMD0 = 0x40 */
 #define SD_CMD_SEND_IF_COND 8        /* CMD8 = 0x48 */
@@ -133,7 +133,7 @@ uint8_t fi_SD_init(void) {
     return 0;
 }
 
-uint8_t fi_SD_writeBlock(uint32_t block, uint8_t *data, uint8_t length) {
+uint8_t fi_SD_writeBlock(uint32_t block, uint8_t* data, uint8_t length) {
     uint8_t status;
 
     if ((status = fi_SD_init())) {
@@ -187,6 +187,8 @@ uint8_t startReadCmd(uint32_t block) {
     if (!readUntil(0xFE)) {
         return 2;
     }
+
+    return 0;
 }
 
 uint8_t endReadCmd() {
@@ -234,7 +236,7 @@ uint8_t fi_SD_Reader_init(uint32_t block, uint16_t offset) {
     return 0;
 }
 
-uint8_t fi_SD_Reader_read(uint32_t length, uint8_t *buffer) {
+uint8_t fi_SD_Reader_read(uint32_t length, uint8_t* buffer) {
     uint8_t status = 0;
     bool isEmpty = buffer == NULL;
 
@@ -271,11 +273,13 @@ uint8_t fi_SD_Reader_read(uint32_t length, uint8_t *buffer) {
     return 0;
 }
 
-uint8_t fi_SD_Reader_jump(uint8_t *ptr) {
+uint8_t fi_SD_Reader_jump(uint8_t* ptr) {
     uint8_t status = 0;
 
-    uint32_t block = *(uint32_t *)(ptr + 1) >> 1;
-    uint16_t offset = *(uint16_t *)ptr & 0x1ff;
+    // uint32_t block = *(uint32_t *)(ptr + 1) >> 1;
+    // uint16_t offset = *(uint16_t *)ptr & 0x1ff;
+    uint32_t block = ((ptr[1] >> 1) && 0x7f) | (ptr[2] << 7) | (ptr[3] << 15) | (ptr[4] << 23);
+    uint16_t offset = ptr[0] | ((ptr[1] << 8) & 0x0100);
 
     if (offset < 5) {
         block -= 1;
@@ -304,7 +308,6 @@ uint8_t fi_SD_Reader_jump(uint8_t *ptr) {
 }
 
 uint8_t fi_SD_Reader_close() {
-
     uint8_t status = 0;
 
     if (state.status != STATUS_READING) {
@@ -321,7 +324,10 @@ uint8_t fi_SD_Reader_close() {
     return endReadCmd();
 }
 
-uint8_t fi_SD_read(uint32_t block, uint16_t offset, uint32_t length, uint8_t *buffer) {
+uint8_t fi_SD_read(uint32_t block,
+                   uint16_t offset,
+                   uint32_t length,
+                   uint8_t* buffer) {
     uint8_t status = 0;
 
     if ((status = fi_SD_Reader_init(block, offset))) {

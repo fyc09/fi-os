@@ -136,7 +136,7 @@ GETTER(simsun) {
 }
 
 uint8_t fi_font_write(const char *str, uint8_t x, uint8_t y, fi_font_t font, bool reversed) {
-    uint8_t status;
+    uint8_t status = -1;
     uint64_t unicode = 1;
     uint8_t matrix[32];
 
