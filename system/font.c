@@ -1,10 +1,12 @@
 #include "font.h"
+#include <stdint.h>
+#include "font.h"
+#include "fontdata.h"
 #include "oled.h"
 #include "sd.h"
 #include "system.h"
-#include <stdint.h>
 
-uint64_t utf8_2_unicode(const char **str) {
+uint64_t utf8_2_unicode(const char** str) {
     uint64_t codepoint = 0;
     int shift = 0;
     int length = 0;
@@ -12,19 +14,19 @@ uint64_t utf8_2_unicode(const char **str) {
 
     // Check first byte
     c = (unsigned char)**str;
-    if ((c & 0x80) == 0) { // 1-byte sequence
+    if ((c & 0x80) == 0) {  // 1-byte sequence
         codepoint = c;
         length = 1;
-    } else if ((c & 0xE0) == 0xC0) { // 2-byte sequence
+    } else if ((c & 0xE0) == 0xC0) {  // 2-byte sequence
         codepoint = c & 0x1F;
         length = 2;
-    } else if ((c & 0xF0) == 0xE0) { // 3-byte sequence
+    } else if ((c & 0xF0) == 0xE0) {  // 3-byte sequence
         codepoint = c & 0x0F;
         length = 3;
-    } else if ((c & 0xF8) == 0xF0) { // 4-byte sequence
+    } else if ((c & 0xF8) == 0xF0) {  // 4-byte sequence
         codepoint = c & 0x07;
         length = 4;
-    } else { // Invalid
+    } else {  // Invalid
         return 0;
     }
 
@@ -32,7 +34,7 @@ uint64_t utf8_2_unicode(const char **str) {
     while (--length > 0) {
         (*str)++;
         c = (unsigned char)**str;
-        if ((c & 0xC0) != 0x80) { // Invalid
+        if ((c & 0xC0) != 0x80) {  // Invalid
             return 0;
         }
         codepoint = (codepoint << 6) | (c & 0x3F);
@@ -135,7 +137,30 @@ GETTER(simsun) {
     return status;
 }
 
-uint8_t fi_font_write(const char *str, uint8_t x, uint8_t y, fi_font_t font, bool reversed) {
+GETTER(ascii8x16) {
+    if (unicode < 32ull || unicode > 126ull) {
+        return 1;
+    }
+    for (uint8_t i = 0; i < 16; i++) {
+        matrix[i] = FONTDATA_ASCII_8x16[unicode - ' '][i];
+    }
+}
+
+GETTER(ascii6x16) {
+    printf("%lld", unicode);
+    if (unicode < 32 || unicode > 126) {
+        return 1;
+    }
+    for (uint8_t i = 0; i < 12; i++) {
+        matrix[i] = FONTDATA_ASCII_6x16[unicode - ' '][i];
+    }
+}
+
+uint8_t fi_font_write(const char* str,
+                      uint8_t x,
+                      uint8_t y,
+                      fi_matrix_t font,
+                      bool reversed) {
     uint8_t status = -1;
     uint64_t unicode = 1;
     uint8_t matrix[32];

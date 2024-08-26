@@ -99,8 +99,6 @@ void fi_inter_OLED_cleanup(void) {
 }
 
 void fi_inter_SD_write(uint8_t data) {
-    printf("(w)%02X ", data);
-
     gpio_put(SD_CS, false);
     NOP();
     for (int i = 0; i < 8; i++) {
@@ -136,8 +134,6 @@ uint8_t fi_inter_SD_read(void) {
         NOP();
     }
     gpio_put(SD_CS, true);
-
-    printf("(r)%02X ", data);
 
     return data;
 }

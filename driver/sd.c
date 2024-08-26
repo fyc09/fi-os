@@ -69,9 +69,7 @@ uint8_t readByte() {
 }
 
 uint8_t readRaw() {
-    // return fi_inter_SD_read();
     uint8_t res = fi_inter_SD_read();
-    // printf("%02x ", res);
     return res;
 }
 

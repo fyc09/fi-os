@@ -14,9 +14,7 @@ uint8_t fi_file_open(const char* filename) {
     uint8_t record[16];
     uint8_t i;
 
-    printf(";;;\n");
     if ((status = fi_SD_Reader_init(0, 0))) {
-    printf("%d", status);
         return status;
     }
 

@@ -153,7 +153,7 @@ void fi_OLED_clear(void) {
         write(0x00, CMD);
         write(0x10, CMD);
         for (uint8_t j = 0; j < 128; j++) {
-            write(0xff, DATA);
+            write(0x00, DATA);
         }
     }
 }

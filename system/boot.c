@@ -15,9 +15,9 @@ uint8_t fi_system_init(void) {
 
     fi_OLED_clear();
 
-    if ((code = fi_SD_init())) {
-        return code;
-    }
+    // if ((code = fi_SD_init())) {
+    //     return code;
+    // }
 
     return 0;
 }
