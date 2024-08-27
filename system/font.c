@@ -8,7 +8,6 @@
 
 uint64_t utf8_2_unicode(const char** str) {
     uint64_t codepoint = 0;
-    int shift = 0;
     int length = 0;
     unsigned char c;
 
@@ -138,28 +137,29 @@ GETTER(simsun) {
 }
 
 GETTER(ascii8x16) {
-    if (unicode < 32ull || unicode > 126ull) {
+    if (unicode < 32 || unicode > 126) {
         return 1;
     }
     for (uint8_t i = 0; i < 16; i++) {
         matrix[i] = FONTDATA_ASCII_8x16[unicode - ' '][i];
     }
+    return 0;
 }
 
 GETTER(ascii6x16) {
-    printf("%lld", unicode);
     if (unicode < 32 || unicode > 126) {
         return 1;
     }
     for (uint8_t i = 0; i < 12; i++) {
         matrix[i] = FONTDATA_ASCII_6x16[unicode - ' '][i];
     }
+    return 0;
 }
 
 uint8_t fi_font_write(const char* str,
                       uint8_t x,
                       uint8_t y,
-                      fi_matrix_t font,
+                      fi_font_t font,
                       bool reversed) {
     uint8_t status = -1;
     uint64_t unicode = 1;

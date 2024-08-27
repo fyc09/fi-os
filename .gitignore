@@ -2,3 +2,4 @@ success
 run.sh
 build
 .venv
+__pycache__

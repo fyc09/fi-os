@@ -1,11 +1,18 @@
 #include <stdio.h>
 #include "font.h"
+#include "home.h"
 #include "interface.h"
 #include "keyboard.h"
 #include "oled.h"
 #include "pico/stdlib.h"
 #include "sd.h"
 #include "system.h"
+
+bool scanCallback(repeating_timer_t* timer) {
+    timer->alarm_id = 0;
+    fi_Keyboard_scan();
+    return true;
+}
 
 int main() {
     uint8_t code;
@@ -19,18 +26,16 @@ int main() {
         return code;
     }
 
-    getchar();
+    repeating_timer_t timer;
 
-    fi_OLED_init();
-    fi_OLED_setDisplay(ON);
-    fi_OLED_clear();
+    add_repeating_timer_us(10, scanCallback, NULL, &timer);
 
-    fi_font_write("Hello, world!", 0, 0, FI_FONT_ASCII6x16, NORMAL);
+    // for (;;) {
+    //     printf("%04x ", fi_Keyboard_getMap());
+    //     sleep_us(10);
+    // }
 
-    printf("Hello, world!");
-
-    for (;;)
-        ;
+    home_main();
 
     return 0;
 }

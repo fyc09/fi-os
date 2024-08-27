@@ -71,7 +71,7 @@ def make_font_Simsun():
 
     anchors = {}
 
-    for g in batched(chrs, 36):
+    for g in batched(chrs, 24):
         file += itob(ord(g[-1]), 3)
         anchors[g[0]] = len(file)
         file += b"\x00" * 5

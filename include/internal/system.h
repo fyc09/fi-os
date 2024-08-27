@@ -4,10 +4,15 @@
 #define FI_SYSTEM_H
 
 typedef struct {
-    uint8_t (*getter)(uint64_t unicode, uint8_t* matrix);
+    const uint8_t* matrix;
     uint8_t width;
     uint8_t height;
 } fi_matrix_t;
+
+#define FI_MATRIX(name, width, height) \
+    (fi_matrix_t) {                    \
+        name, width, height            \
+    }
 
 /**
  * Cleanup system resources.

@@ -5,11 +5,17 @@
 #ifndef _FONT_H
 #define _FONT_H
 
+typedef struct {
+    uint8_t (*getter)(uint64_t unicode, uint8_t* matrix);
+    uint8_t width;
+    uint8_t height;
+} fi_font_t;
+
 #define GET_GETTER(name) _fi_font_##name##_getter
 #define GETTER(name) \
     uint8_t GET_GETTER(name)(uint64_t unicode, uint8_t * matrix)
 #define DEFINE(name, width, height)     \
-    (fi_matrix_t) {                     \
+    (fi_font_t) {                     \
         GET_GETTER(name), width, height \
     }
 
@@ -26,7 +32,7 @@ GETTER(ascii6x16);
 uint8_t fi_font_write(const char* str,
                       uint8_t x,
                       uint8_t y,
-                      fi_matrix_t font,
+                      fi_font_t font,
                       bool reversed);
 
 #endif

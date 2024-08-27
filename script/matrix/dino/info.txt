@@ -1,0 +1,113 @@
+[RESOURCES]
+0	0	128	8	0	0	0	0	GAME_OVER_TEXT
+0	15	3	5	0	0	3	0	NUM_0
+4	15	3	5	0	0	3	0	NUM_1
+8	15	3	5	0	0	3	0	NUM_2
+12	15	3	5	0	0	3	0	NUM_3
+16	15	3	5	0	0	3	0	NUM_4
+20	15	3	5	0	0	3	0	NUM_5
+24	15	3	5	0	0	3	0	NUM_6
+28	15	3	5	0	0	3	0	NUM_7
+32	15	3	5	0	0	3	0	NUM_8
+36	15	3	5	0	0	3	0	NUM_9
+0	42	8	9	7	0	0	0	DINO_STANDING
+9	46	10	5	3	0	0	0	DINO_LYING
+20	43	10	7	0	0	1	0	BIRD_LOW_DOWN
+31	43	11	5	0	0	3	0	BIRD_LOW_UP
+43	36	10	7	0	0	1	0	BIRD_HIGH_DOWN
+54	35	11	6	0	0	2	0	BIRD_HIGH_UP
+66	43	4	8	0	0	0	0	PLANT_SMALL
+71	43	11	8	0	0	0	0	PLANT_BIG
+0	51	128	5	0	0	3	0	LAND
+
+[LIST]
+[NAME]
+NUMS
+[ITEMS]
+NUM_0
+NUM_1
+NUM_2
+NUM_3
+NUM_4
+NUM_5
+NUM_6
+NUM_7
+NUM_8
+NUM_9
+
+[LAYER]
+[NAME]
+land
+[PARAMS]
+number	scroll	s
+[PARTS]
+s	56	128-s	_	LAND
+0	56	s	_	LAND
+
+[LAYER]
+[NAME]
+dino
+[PARAMS]
+number	height
+bool	isLying
+[DEFINE]
+height	0	DINO_STANDING	picShift
+[PARTS]
+[IF]
+isLying
+[GO]
+8	48	_	_	DINO_LYING
+[ELSE]
+8	40	_	_	picShift
+
+[LAYER]
+[NAME]
+object
+[PARAMS]
+number	x
+number	type
+[PARTS]
+[IF]
+type == 0
+[GO]
+x	40	_	_	BIRD_HIGH_UP
+[ELIF]
+type == 1
+[GO]
+x	40	_	_	BIRD_HIGH_DOWN
+[ELIF]
+type == 2
+[GO]
+x	48	_	_	BIRD_LOW_UP
+[ELIF]
+type == 3
+X	48	_	_	BIRD_LOW_DOWN
+[ELIF]
+type == 4
+[GO]
+x	48	_	_	PLANT_SMALL
+[ELIF]
+type == 5
+[GO]
+x	48	_	_	PLANT_BIG
+
+[LAYER]
+[NAME]
+score
+[PARAMS]
+number	score
+[DEFINE]
+d4	score / 1000
+d3	score / 100 - score / 1000 * 10
+d2	score / 10 - score / 100 * 10
+d1	score - score / 10 * 10
+[PARTS]
+100	8	_	_	NUMS[d4]
+104	8	_	_	NUMS[d3]
+108	8	_	_	NUMS[d2]
+112	8	_	_	NUMS[d1]
+
+[LAYER]
+gameOver
+[PARTS]
+0	24	_	_	GAME_OVER_TEXT

@@ -142,10 +142,6 @@ uint8_t fi_SD_writeBlock(uint32_t block, uint8_t* data, uint8_t length) {
         return 1;
     }
 
-    if (length > 512) {
-        return 2;
-    }
-
     sendCmd(SD_CMD_WRITE_SINGLE_BLOCK, block, 0xff);
     if (!readUntil(0x00)) {
         return 3;
@@ -306,8 +302,6 @@ uint8_t fi_SD_Reader_jump(uint8_t* ptr) {
 }
 
 uint8_t fi_SD_Reader_close() {
-    uint8_t status = 0;
-
     if (state.status != STATUS_READING) {
         return 0;
     }
