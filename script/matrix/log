@@ -1,0 +1,1796 @@
+[36m<CmdObj 0x7fd391a37580[39m
+  [32m.childCmd[39m = [
+    [36m<CmdObj 0x7fd391a374c0[39m
+      [32m.childCmd[39m = [],
+      [32m.childVal[39m = [
+        [36m<Resources 0x7fd391a37460[39m
+          [32m.b[39m = '0',
+          [32m.h[39m = '8',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'GAME_OVER_TEXT',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '128',
+          [32m.x[39m = '0',
+          [32m.y[39m = '0'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37430[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_0',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '0',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37400[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_1',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '4',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a373d0[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_2',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '8',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a373a0[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_3',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '12',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37370[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_4',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '16',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37340[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_5',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '20',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37310[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_6',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '24',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a372e0[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_7',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '28',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a372b0[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_8',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '32',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37280[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'NUM_9',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '3',
+          [32m.x[39m = '36',
+          [32m.y[39m = '15'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37250[39m
+          [32m.b[39m = '0',
+          [32m.h[39m = '9',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'DINO_STANDING',
+          [32m.r[39m = '0',
+          [32m.t[39m = '7',
+          [32m.w[39m = '8',
+          [32m.x[39m = '0',
+          [32m.y[39m = '42'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37220[39m
+          [32m.b[39m = '0',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'DINO_LYING',
+          [32m.r[39m = '0',
+          [32m.t[39m = '3',
+          [32m.w[39m = '10',
+          [32m.x[39m = '9',
+          [32m.y[39m = '46'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a371f0[39m
+          [32m.b[39m = '1',
+          [32m.h[39m = '7',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'BIRD_LOW_DOWN',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '10',
+          [32m.x[39m = '20',
+          [32m.y[39m = '43'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a371c0[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'BIRD_LOW_UP',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '11',
+          [32m.x[39m = '31',
+          [32m.y[39m = '43'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37190[39m
+          [32m.b[39m = '1',
+          [32m.h[39m = '7',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'BIRD_HIGH_DOWN',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '10',
+          [32m.x[39m = '43',
+          [32m.y[39m = '36'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37160[39m
+          [32m.b[39m = '2',
+          [32m.h[39m = '6',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'BIRD_HIGH_UP',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '11',
+          [32m.x[39m = '54',
+          [32m.y[39m = '35'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37130[39m
+          [32m.b[39m = '0',
+          [32m.h[39m = '8',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'PLANT_SMALL',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '4',
+          [32m.x[39m = '66',
+          [32m.y[39m = '43'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a37100[39m
+          [32m.b[39m = '0',
+          [32m.h[39m = '8',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'PLANT_BIG',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '11',
+          [32m.x[39m = '71',
+          [32m.y[39m = '43'
+        [36m>[39m,
+        [36m<Resources 0x7fd391a370d0[39m
+          [32m.b[39m = '3',
+          [32m.h[39m = '5',
+          [32m.l[39m = '0',
+          [32m.name[39m = 'LAND',
+          [32m.r[39m = '0',
+          [32m.t[39m = '0',
+          [32m.w[39m = '128',
+          [32m.x[39m = '0',
+          [32m.y[39m = '51'
+        [36m>[39m
+      ],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a37b50[39m
+        [32m.cls[39m = <class '__main__.Resources'>,
+        [32m.name[39m = 'RESOURCES',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m,
+    [36m<CmdObj 0x7fd391a370a0[39m
+      [32m.childCmd[39m = [
+        [36m<CmdObj 0x7fd391a37040[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Name 0x7fd391a36fe0[39m
+              [32m.name[39m = 'NUMS'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37610[39m
+            [32m.cls[39m = <class '__main__.Name'>,
+            [32m.name[39m = 'NAME',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a36f80[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Items 0x7fd391a36f20[39m
+              [32m.name[39m = 'NUM_0'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36ec0[39m
+              [32m.name[39m = 'NUM_1'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36e60[39m
+              [32m.name[39m = 'NUM_2'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36e00[39m
+              [32m.name[39m = 'NUM_3'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36da0[39m
+              [32m.name[39m = 'NUM_4'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36d40[39m
+              [32m.name[39m = 'NUM_5'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36ce0[39m
+              [32m.name[39m = 'NUM_6'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36c80[39m
+              [32m.name[39m = 'NUM_7'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36c20[39m
+              [32m.name[39m = 'NUM_8'
+            [36m>[39m,
+            [36m<Items 0x7fd391a36bc0[39m
+              [32m.name[39m = 'NUM_9'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37a30[39m
+            [32m.cls[39m = <class '__main__.Items'>,
+            [32m.name[39m = 'ITEMS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m
+      ],
+      [32m.childVal[39m = [],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a37a90[39m
+        [32m.cls[39m = <class '__main__.List'>,
+        [32m.name[39m = 'LIST',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m,
+    [36m<CmdObj 0x7fd391a36b60[39m
+      [32m.childCmd[39m = [
+        [36m<CmdObj 0x7fd391a36b00[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Name 0x7fd391a36aa0[39m
+              [32m.name[39m = 'land'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37610[39m
+            [32m.cls[39m = <class '__main__.Name'>,
+            [32m.name[39m = 'NAME',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a36a40[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Params 0x7fd391a35810[39m
+              [32m.name[39m = 'scroll',
+              [32m.type[39m = 'number'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37970[39m
+            [32m.cls[39m = <class '__main__.Params'>,
+            [32m.name[39m = 'PARAMS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a357b0[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Parts 0x7fd391a35750[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'LAND',
+              [32m.width[39m = '128-sroll',
+              [32m.x[39m = 'scroll',
+              [32m.y[39m = '56'
+            [36m>[39m,
+            [36m<Parts 0x7fd391a35720[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'LAND',
+              [32m.width[39m = 'scroll',
+              [32m.x[39m = '0',
+              [32m.y[39m = '56'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+            [32m.cls[39m = <class '__main__.Parts'>,
+            [32m.name[39m = 'PARTS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a377c0[39m
+                [32m.cls[39m = <class '__main__.Elif'>,
+                [32m.name[39m = 'ELIF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m
+                ]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37730[39m
+                [32m.cls[39m = <class '__main__.Else'>,
+                [32m.name[39m = 'ELSE',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m,
+                  [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m
+      ],
+      [32m.childVal[39m = [],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a379d0[39m
+        [32m.cls[39m = <class '__main__.Layer'>,
+        [32m.name[39m = 'LAYER',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m,
+    [36m<CmdObj 0x7fd391a356c0[39m
+      [32m.childCmd[39m = [
+        [36m<CmdObj 0x7fd391a35630[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Name 0x7fd391a355d0[39m
+              [32m.name[39m = 'dino'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37610[39m
+            [32m.cls[39m = <class '__main__.Name'>,
+            [32m.name[39m = 'NAME',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a35570[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Params 0x7fd391a35510[39m
+              [32m.name[39m = 'height',
+              [32m.type[39m = 'number'
+            [36m>[39m,
+            [36m<Params 0x7fd391a354b0[39m
+              [32m.name[39m = 'isLying',
+              [32m.type[39m = 'bool'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37970[39m
+            [32m.cls[39m = <class '__main__.Params'>,
+            [32m.name[39m = 'PARAMS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a35450[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Def 0x7fd391a353f0[39m
+              [32m.name[39m = 'shiftedPic',
+              [32m.value[39m = 'fi_ui_util_shift(DINO_STANDING, height, 0)'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a378e0[39m
+            [32m.cls[39m = <class '__main__.Def'>,
+            [32m.name[39m = 'DEF',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a35390[39m
+          [32m.childCmd[39m = [
+            [36m<CmdObj 0x7fd391a35330[39m
+              [32m.childCmd[39m = [
+                [36m<CmdObj 0x7fd391a35270[39m
+                  [32m.childCmd[39m = [],
+                  [32m.childVal[39m = [
+                    [36m<Parts 0x7fd391a35210[39m
+                      [32m.height[39m = '_',
+                      [32m.name[39m = 'DINO_LYING',
+                      [32m.width[39m = '_',
+                      [32m.x[39m = '8',
+                      [32m.y[39m = '48'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                    [32m.cls[39m = <class '__main__.Parts'>,
+                    [32m.name[39m = 'PARTS',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a379d0[39m
+                        [32m.cls[39m = <class '__main__.Layer'>,
+                        [32m.name[39m = 'LAYER',
+                        [32m.parents[39m = []
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a377c0[39m
+                        [32m.cls[39m = <class '__main__.Elif'>,
+                        [32m.name[39m = 'ELIF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m
+                        ]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37730[39m
+                        [32m.cls[39m = <class '__main__.Else'>,
+                        [32m.name[39m = 'ELSE',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m,
+                [36m<CmdObj 0x7fd391a351e0[39m
+                  [32m.childCmd[39m = [
+                    [36m<CmdObj 0x7fd391a35150[39m
+                      [32m.childCmd[39m = [],
+                      [32m.childVal[39m = [
+                        [36m<Parts 0x7fd391a350f0[39m
+                          [32m.height[39m = '_',
+                          [32m.name[39m = 'shiftedPic',
+                          [32m.width[39m = '_',
+                          [32m.x[39m = '8',
+                          [32m.y[39m = '40'
+                        [36m>[39m
+                      ],
+                      [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                        [32m.cls[39m = <class '__main__.Parts'>,
+                        [32m.name[39m = 'PARTS',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a379d0[39m
+                            [32m.cls[39m = <class '__main__.Layer'>,
+                            [32m.name[39m = 'LAYER',
+                            [32m.parents[39m = []
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37730[39m
+                            [32m.cls[39m = <class '__main__.Else'>,
+                            [32m.name[39m = 'ELSE',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m
+                                    [32m.cls[39m = <class '__main__.If'>,
+                                    [32m.name[39m = 'IF',
+                                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                                  [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    [36m>[39m
+                  ],
+                  [32m.childVal[39m = [],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a37730[39m
+                    [32m.cls[39m = <class '__main__.Else'>,
+                    [32m.name[39m = 'ELSE',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a376a0[39m
+                            [32m.cls[39m = <class '__main__.Parts'>,
+                            [32m.name[39m = 'PARTS',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a379d0[39m
+                                [32m.cls[39m = <class '__main__.Layer'>,
+                                [32m.name[39m = 'LAYER',
+                                [32m.parents[39m = []
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a37850[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37730[39m ... [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a377c0[39m
+                        [32m.cls[39m = <class '__main__.Elif'>,
+                        [32m.name[39m = 'ELIF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a376a0[39m
+                                [32m.cls[39m = <class '__main__.Parts'>,
+                                [32m.name[39m = 'PARTS',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a379d0[39m
+                                    [32m.cls[39m = <class '__main__.Layer'>,
+                                    [32m.name[39m = 'LAYER',
+                                    [32m.parents[39m = []
+                                  [36m>[39m,
+                                  [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a37730[39m ... [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m
+              ],
+              [32m.childVal[39m = [
+                [36m<If 0x7fd391a352d0[39m
+                  [32m.condition[39m = 'isLying'
+                [36m>[39m
+              ],
+              [32m.cmd[39m = [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a376a0[39m
+                    [32m.cls[39m = <class '__main__.Parts'>,
+                    [32m.name[39m = 'PARTS',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a379d0[39m
+                        [32m.cls[39m = <class '__main__.Layer'>,
+                        [32m.name[39m = 'LAYER',
+                        [32m.parents[39m = []
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                      [36m<Cmd 0x7fd391a377c0[39m
+                        [32m.cls[39m = <class '__main__.Elif'>,
+                        [32m.name[39m = 'ELIF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a37850[39m ... [36m>[39m]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37730[39m
+                        [32m.cls[39m = <class '__main__.Else'>,
+                        [32m.name[39m = 'ELSE',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a37850[39m ... [36m>[39m]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            [36m>[39m
+          ],
+          [32m.childVal[39m = [],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+            [32m.cls[39m = <class '__main__.Parts'>,
+            [32m.name[39m = 'PARTS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a377c0[39m
+                [32m.cls[39m = <class '__main__.Elif'>,
+                [32m.name[39m = 'ELIF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m
+                ]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37730[39m
+                [32m.cls[39m = <class '__main__.Else'>,
+                [32m.name[39m = 'ELSE',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m,
+                  [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m
+      ],
+      [32m.childVal[39m = [],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a379d0[39m
+        [32m.cls[39m = <class '__main__.Layer'>,
+        [32m.name[39m = 'LAYER',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m,
+    [36m<CmdObj 0x7fd391a350c0[39m
+      [32m.childCmd[39m = [
+        [36m<CmdObj 0x7fd391a35030[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Name 0x7fd391a34fd0[39m
+              [32m.name[39m = 'object'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37610[39m
+            [32m.cls[39m = <class '__main__.Name'>,
+            [32m.name[39m = 'NAME',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a34f70[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Params 0x7fd391a34f10[39m
+              [32m.name[39m = 'x',
+              [32m.type[39m = 'number'
+            [36m>[39m,
+            [36m<Params 0x7fd391a34eb0[39m
+              [32m.name[39m = 'type',
+              [32m.type[39m = 'number'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37970[39m
+            [32m.cls[39m = <class '__main__.Params'>,
+            [32m.name[39m = 'PARAMS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a34e50[39m
+          [32m.childCmd[39m = [
+            [36m<CmdObj 0x7fd391a34df0[39m
+              [32m.childCmd[39m = [
+                [36m<CmdObj 0x7fd391a34d30[39m
+                  [32m.childCmd[39m = [],
+                  [32m.childVal[39m = [
+                    [36m<Parts 0x7fd391a34cd0[39m
+                      [32m.height[39m = '_',
+                      [32m.name[39m = 'BIRD_HIGH_UP',
+                      [32m.width[39m = '_',
+                      [32m.x[39m = 'x',
+                      [32m.y[39m = '40'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                    [32m.cls[39m = <class '__main__.Parts'>,
+                    [32m.name[39m = 'PARTS',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a379d0[39m
+                        [32m.cls[39m = <class '__main__.Layer'>,
+                        [32m.name[39m = 'LAYER',
+                        [32m.parents[39m = []
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a377c0[39m
+                        [32m.cls[39m = <class '__main__.Elif'>,
+                        [32m.name[39m = 'ELIF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m
+                        ]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37730[39m
+                        [32m.cls[39m = <class '__main__.Else'>,
+                        [32m.name[39m = 'ELSE',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m,
+                [36m<CmdObj 0x7fd391a34ca0[39m
+                  [32m.childCmd[39m = [
+                    [36m<CmdObj 0x7fd391a34bb0[39m
+                      [32m.childCmd[39m = [],
+                      [32m.childVal[39m = [
+                        [36m<Parts 0x7fd391a34b50[39m
+                          [32m.height[39m = '_',
+                          [32m.name[39m = 'BIRD_HIGH_DOWN',
+                          [32m.width[39m = '_',
+                          [32m.x[39m = 'x',
+                          [32m.y[39m = '40'
+                        [36m>[39m
+                      ],
+                      [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                        [32m.cls[39m = <class '__main__.Parts'>,
+                        [32m.name[39m = 'PARTS',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a379d0[39m
+                            [32m.cls[39m = <class '__main__.Layer'>,
+                            [32m.name[39m = 'LAYER',
+                            [32m.parents[39m = []
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37730[39m
+                            [32m.cls[39m = <class '__main__.Else'>,
+                            [32m.name[39m = 'ELSE',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m
+                                    [32m.cls[39m = <class '__main__.If'>,
+                                    [32m.name[39m = 'IF',
+                                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                                  [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    [36m>[39m
+                  ],
+                  [32m.childVal[39m = [
+                    [36m<Elif 0x7fd391a34c10[39m
+                      [32m.condition[39m = 'type == 1'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a376a0[39m
+                            [32m.cls[39m = <class '__main__.Parts'>,
+                            [32m.name[39m = 'PARTS',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a379d0[39m
+                                [32m.cls[39m = <class '__main__.Layer'>,
+                                [32m.name[39m = 'LAYER',
+                                [32m.parents[39m = []
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a37730[39m
+                                [32m.cls[39m = <class '__main__.Else'>,
+                                [32m.name[39m = 'ELSE',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m,
+                [36m<CmdObj 0x7fd391a34b20[39m
+                  [32m.childCmd[39m = [
+                    [36m<CmdObj 0x7fd391a34a30[39m
+                      [32m.childCmd[39m = [],
+                      [32m.childVal[39m = [
+                        [36m<Parts 0x7fd391a349d0[39m
+                          [32m.height[39m = '_',
+                          [32m.name[39m = 'BIRD_LOW_UP',
+                          [32m.width[39m = '_',
+                          [32m.x[39m = 'x',
+                          [32m.y[39m = '48'
+                        [36m>[39m
+                      ],
+                      [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                        [32m.cls[39m = <class '__main__.Parts'>,
+                        [32m.name[39m = 'PARTS',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a379d0[39m
+                            [32m.cls[39m = <class '__main__.Layer'>,
+                            [32m.name[39m = 'LAYER',
+                            [32m.parents[39m = []
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37730[39m
+                            [32m.cls[39m = <class '__main__.Else'>,
+                            [32m.name[39m = 'ELSE',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m
+                                    [32m.cls[39m = <class '__main__.If'>,
+                                    [32m.name[39m = 'IF',
+                                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                                  [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    [36m>[39m
+                  ],
+                  [32m.childVal[39m = [
+                    [36m<Elif 0x7fd391a34a90[39m
+                      [32m.condition[39m = 'type == 2'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a376a0[39m
+                            [32m.cls[39m = <class '__main__.Parts'>,
+                            [32m.name[39m = 'PARTS',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a379d0[39m
+                                [32m.cls[39m = <class '__main__.Layer'>,
+                                [32m.name[39m = 'LAYER',
+                                [32m.parents[39m = []
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a37730[39m
+                                [32m.cls[39m = <class '__main__.Else'>,
+                                [32m.name[39m = 'ELSE',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m,
+                [36m<CmdObj 0x7fd391a349a0[39m
+                  [32m.childCmd[39m = [
+                    [36m<CmdObj 0x7fd391a348b0[39m
+                      [32m.childCmd[39m = [],
+                      [32m.childVal[39m = [
+                        [36m<Parts 0x7fd391a34850[39m
+                          [32m.height[39m = '_',
+                          [32m.name[39m = 'BIRD_LOW_DOWN',
+                          [32m.width[39m = '_',
+                          [32m.x[39m = 'X',
+                          [32m.y[39m = '48'
+                        [36m>[39m
+                      ],
+                      [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                        [32m.cls[39m = <class '__main__.Parts'>,
+                        [32m.name[39m = 'PARTS',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a379d0[39m
+                            [32m.cls[39m = <class '__main__.Layer'>,
+                            [32m.name[39m = 'LAYER',
+                            [32m.parents[39m = []
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37730[39m
+                            [32m.cls[39m = <class '__main__.Else'>,
+                            [32m.name[39m = 'ELSE',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m
+                                    [32m.cls[39m = <class '__main__.If'>,
+                                    [32m.name[39m = 'IF',
+                                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                                  [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    [36m>[39m
+                  ],
+                  [32m.childVal[39m = [
+                    [36m<Elif 0x7fd391a34910[39m
+                      [32m.condition[39m = 'type == 3'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a376a0[39m
+                            [32m.cls[39m = <class '__main__.Parts'>,
+                            [32m.name[39m = 'PARTS',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a379d0[39m
+                                [32m.cls[39m = <class '__main__.Layer'>,
+                                [32m.name[39m = 'LAYER',
+                                [32m.parents[39m = []
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a37730[39m
+                                [32m.cls[39m = <class '__main__.Else'>,
+                                [32m.name[39m = 'ELSE',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m,
+                [36m<CmdObj 0x7fd391a34820[39m
+                  [32m.childCmd[39m = [
+                    [36m<CmdObj 0x7fd391a34730[39m
+                      [32m.childCmd[39m = [],
+                      [32m.childVal[39m = [
+                        [36m<Parts 0x7fd391a346d0[39m
+                          [32m.height[39m = '_',
+                          [32m.name[39m = 'PLANT_SMALL',
+                          [32m.width[39m = '_',
+                          [32m.x[39m = 'x',
+                          [32m.y[39m = '48'
+                        [36m>[39m
+                      ],
+                      [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                        [32m.cls[39m = <class '__main__.Parts'>,
+                        [32m.name[39m = 'PARTS',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a379d0[39m
+                            [32m.cls[39m = <class '__main__.Layer'>,
+                            [32m.name[39m = 'LAYER',
+                            [32m.parents[39m = []
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37730[39m
+                            [32m.cls[39m = <class '__main__.Else'>,
+                            [32m.name[39m = 'ELSE',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m
+                                    [32m.cls[39m = <class '__main__.If'>,
+                                    [32m.name[39m = 'IF',
+                                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                                  [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    [36m>[39m
+                  ],
+                  [32m.childVal[39m = [
+                    [36m<Elif 0x7fd391a34790[39m
+                      [32m.condition[39m = 'type == 4'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a376a0[39m
+                            [32m.cls[39m = <class '__main__.Parts'>,
+                            [32m.name[39m = 'PARTS',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a379d0[39m
+                                [32m.cls[39m = <class '__main__.Layer'>,
+                                [32m.name[39m = 'LAYER',
+                                [32m.parents[39m = []
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a37730[39m
+                                [32m.cls[39m = <class '__main__.Else'>,
+                                [32m.name[39m = 'ELSE',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m,
+                [36m<CmdObj 0x7fd391a346a0[39m
+                  [32m.childCmd[39m = [
+                    [36m<CmdObj 0x7fd391a345b0[39m
+                      [32m.childCmd[39m = [],
+                      [32m.childVal[39m = [
+                        [36m<Parts 0x7fd391a34550[39m
+                          [32m.height[39m = '_',
+                          [32m.name[39m = 'PLANT_BIG',
+                          [32m.width[39m = '_',
+                          [32m.x[39m = 'x',
+                          [32m.y[39m = '48'
+                        [36m>[39m
+                      ],
+                      [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+                        [32m.cls[39m = <class '__main__.Parts'>,
+                        [32m.name[39m = 'PARTS',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a379d0[39m
+                            [32m.cls[39m = <class '__main__.Layer'>,
+                            [32m.name[39m = 'LAYER',
+                            [32m.parents[39m = []
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37850[39m
+                            [32m.cls[39m = <class '__main__.If'>,
+                            [32m.name[39m = 'IF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m
+                            ]
+                          [36m>[39m,
+                          [36m<Cmd 0x7fd391a37730[39m
+                            [32m.cls[39m = <class '__main__.Else'>,
+                            [32m.name[39m = 'ELSE',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a37850[39m
+                                [32m.cls[39m = <class '__main__.If'>,
+                                [32m.name[39m = 'IF',
+                                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m
+                                [32m.cls[39m = <class '__main__.Elif'>,
+                                [32m.name[39m = 'ELIF',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m
+                                    [32m.cls[39m = <class '__main__.If'>,
+                                    [32m.name[39m = 'IF',
+                                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                                  [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    [36m>[39m
+                  ],
+                  [32m.childVal[39m = [
+                    [36m<Elif 0x7fd391a34610[39m
+                      [32m.condition[39m = 'type == 5'
+                    [36m>[39m
+                  ],
+                  [32m.cmd[39m = [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a376a0[39m
+                            [32m.cls[39m = <class '__main__.Parts'>,
+                            [32m.name[39m = 'PARTS',
+                            [32m.parents[39m = [
+                              [36m<Cmd 0x7fd391a379d0[39m
+                                [32m.cls[39m = <class '__main__.Layer'>,
+                                [32m.name[39m = 'LAYER',
+                                [32m.parents[39m = []
+                              [36m>[39m,
+                              [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m,
+                              [36m<Cmd 0x7fd391a37730[39m
+                                [32m.cls[39m = <class '__main__.Else'>,
+                                [32m.name[39m = 'ELSE',
+                                [32m.parents[39m = [
+                                  [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                                  [36m<Cmd 0x7fd391a377c0[39m ... [36m>[39m
+                                ]
+                              [36m>[39m
+                            ]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                [36m>[39m
+              ],
+              [32m.childVal[39m = [
+                [36m<If 0x7fd391a34d90[39m
+                  [32m.condition[39m = 'type == 0'
+                [36m>[39m
+              ],
+              [32m.cmd[39m = [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a376a0[39m
+                    [32m.cls[39m = <class '__main__.Parts'>,
+                    [32m.name[39m = 'PARTS',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a379d0[39m
+                        [32m.cls[39m = <class '__main__.Layer'>,
+                        [32m.name[39m = 'LAYER',
+                        [32m.parents[39m = []
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                      [36m<Cmd 0x7fd391a377c0[39m
+                        [32m.cls[39m = <class '__main__.Elif'>,
+                        [32m.name[39m = 'ELIF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a37850[39m ... [36m>[39m]
+                      [36m>[39m,
+                      [36m<Cmd 0x7fd391a37730[39m
+                        [32m.cls[39m = <class '__main__.Else'>,
+                        [32m.name[39m = 'ELSE',
+                        [32m.parents[39m = [
+                          [36m<Cmd 0x7fd391a37850[39m ... [36m>[39m,
+                          [36m<Cmd 0x7fd391a377c0[39m
+                            [32m.cls[39m = <class '__main__.Elif'>,
+                            [32m.name[39m = 'ELIF',
+                            [32m.parents[39m = [[36m<Cmd 0x7fd391a37850[39m ... [36m>[39m]
+                          [36m>[39m
+                        ]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            [36m>[39m
+          ],
+          [32m.childVal[39m = [],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+            [32m.cls[39m = <class '__main__.Parts'>,
+            [32m.name[39m = 'PARTS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a377c0[39m
+                [32m.cls[39m = <class '__main__.Elif'>,
+                [32m.name[39m = 'ELIF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m
+                ]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37730[39m
+                [32m.cls[39m = <class '__main__.Else'>,
+                [32m.name[39m = 'ELSE',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m,
+                  [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m
+      ],
+      [32m.childVal[39m = [],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a379d0[39m
+        [32m.cls[39m = <class '__main__.Layer'>,
+        [32m.name[39m = 'LAYER',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m,
+    [36m<CmdObj 0x7fd391a34520[39m
+      [32m.childCmd[39m = [
+        [36m<CmdObj 0x7fd391a34490[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Name 0x7fd391a34430[39m
+              [32m.name[39m = 'score'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37610[39m
+            [32m.cls[39m = <class '__main__.Name'>,
+            [32m.name[39m = 'NAME',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a343d0[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Params 0x7fd391a34370[39m
+              [32m.name[39m = 'score',
+              [32m.type[39m = 'number'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37970[39m
+            [32m.cls[39m = <class '__main__.Params'>,
+            [32m.name[39m = 'PARAMS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a34310[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Def 0x7fd391a342b0[39m
+              [32m.name[39m = 'd4',
+              [32m.value[39m = 'score / 1000'
+            [36m>[39m,
+            [36m<Def 0x7fd391a34250[39m
+              [32m.name[39m = 'd3',
+              [32m.value[39m = 'score / 100 - score / 1000 * 10'
+            [36m>[39m,
+            [36m<Def 0x7fd391a341f0[39m
+              [32m.name[39m = 'd2',
+              [32m.value[39m = 'score / 10 - score / 100 * 10'
+            [36m>[39m,
+            [36m<Def 0x7fd391a34190[39m
+              [32m.name[39m = 'd1',
+              [32m.value[39m = 'score - score / 10 * 10'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a378e0[39m
+            [32m.cls[39m = <class '__main__.Def'>,
+            [32m.name[39m = 'DEF',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a34130[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Parts 0x7fd391a340d0[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'NUMS[d4]',
+              [32m.width[39m = '_',
+              [32m.x[39m = '100',
+              [32m.y[39m = '8'
+            [36m>[39m,
+            [36m<Parts 0x7fd391a340a0[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'NUMS[d3]',
+              [32m.width[39m = '_',
+              [32m.x[39m = '104',
+              [32m.y[39m = '8'
+            [36m>[39m,
+            [36m<Parts 0x7fd391a34040[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'NUMS[d2]',
+              [32m.width[39m = '_',
+              [32m.x[39m = '108',
+              [32m.y[39m = '8'
+            [36m>[39m,
+            [36m<Parts 0x7fd391a33fa0[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'NUMS[d1]',
+              [32m.width[39m = '_',
+              [32m.x[39m = '112',
+              [32m.y[39m = '8'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+            [32m.cls[39m = <class '__main__.Parts'>,
+            [32m.name[39m = 'PARTS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a377c0[39m
+                [32m.cls[39m = <class '__main__.Elif'>,
+                [32m.name[39m = 'ELIF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m
+                ]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37730[39m
+                [32m.cls[39m = <class '__main__.Else'>,
+                [32m.name[39m = 'ELSE',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m,
+                  [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m
+      ],
+      [32m.childVal[39m = [],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a379d0[39m
+        [32m.cls[39m = <class '__main__.Layer'>,
+        [32m.name[39m = 'LAYER',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m,
+    [36m<CmdObj 0x7fd391a33f40[39m
+      [32m.childCmd[39m = [
+        [36m<CmdObj 0x7fd391a33eb0[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Name 0x7fd391a33e50[39m
+              [32m.name[39m = 'gameOver'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a37610[39m
+            [32m.cls[39m = <class '__main__.Name'>,
+            [32m.name[39m = 'NAME',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a37a90[39m
+                [32m.cls[39m = <class '__main__.List'>,
+                [32m.name[39m = 'LIST',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m,
+        [36m<CmdObj 0x7fd391a33df0[39m
+          [32m.childCmd[39m = [],
+          [32m.childVal[39m = [
+            [36m<Parts 0x7fd391a33d90[39m
+              [32m.height[39m = '_',
+              [32m.name[39m = 'GAME_OVER_TEXT',
+              [32m.width[39m = '_',
+              [32m.x[39m = '0',
+              [32m.y[39m = '24'
+            [36m>[39m
+          ],
+          [32m.cmd[39m = [36m<Cmd 0x7fd391a376a0[39m
+            [32m.cls[39m = <class '__main__.Parts'>,
+            [32m.name[39m = 'PARTS',
+            [32m.parents[39m = [
+              [36m<Cmd 0x7fd391a379d0[39m
+                [32m.cls[39m = <class '__main__.Layer'>,
+                [32m.name[39m = 'LAYER',
+                [32m.parents[39m = []
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37850[39m
+                [32m.cls[39m = <class '__main__.If'>,
+                [32m.name[39m = 'IF',
+                [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a377c0[39m
+                [32m.cls[39m = <class '__main__.Elif'>,
+                [32m.name[39m = 'ELIF',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m
+                ]
+              [36m>[39m,
+              [36m<Cmd 0x7fd391a37730[39m
+                [32m.cls[39m = <class '__main__.Else'>,
+                [32m.name[39m = 'ELSE',
+                [32m.parents[39m = [
+                  [36m<Cmd 0x7fd391a37850[39m
+                    [32m.cls[39m = <class '__main__.If'>,
+                    [32m.name[39m = 'IF',
+                    [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                  [36m>[39m,
+                  [36m<Cmd 0x7fd391a377c0[39m
+                    [32m.cls[39m = <class '__main__.Elif'>,
+                    [32m.name[39m = 'ELIF',
+                    [32m.parents[39m = [
+                      [36m<Cmd 0x7fd391a37850[39m
+                        [32m.cls[39m = <class '__main__.If'>,
+                        [32m.name[39m = 'IF',
+                        [32m.parents[39m = [[36m<Cmd 0x7fd391a376a0[39m ... [36m>[39m]
+                      [36m>[39m
+                    ]
+                  [36m>[39m
+                ]
+              [36m>[39m
+            ]
+          [36m>[39m
+        [36m>[39m
+      ],
+      [32m.childVal[39m = [],
+      [32m.cmd[39m = [36m<Cmd 0x7fd391a379d0[39m
+        [32m.cls[39m = <class '__main__.Layer'>,
+        [32m.name[39m = 'LAYER',
+        [32m.parents[39m = []
+      [36m>[39m
+    [36m>[39m
+  ],
+  [32m.childVal[39m = [],
+  [32m.cmd[39m = [36m<Cmd 0x7fd391a37af0[39m
+    [32m.cls[39m = <class '__main__.Document'>,
+    [32m.name[39m = 'DOCUMENT',
+    [32m.parents[39m = []
+  [36m>[39m
+[36m>[39m

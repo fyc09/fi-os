@@ -1,3 +1,6 @@
+[NAME]
+dino
+
 [RESOURCES]
 0	0	128	8	0	0	0	0	GAME_OVER_TEXT
 0	15	3	5	0	0	3	0	NUM_0
@@ -21,6 +24,8 @@
 0	51	128	5	0	0	3	0	LAND
 
 [LIST]
+[TYPE]
+fi_matrix_t
 [NAME]
 NUMS
 [ITEMS]
@@ -39,10 +44,10 @@ NUM_9
 [NAME]
 land
 [PARAMS]
-number	scroll	s
+number	scroll
 [PARTS]
-s	56	128-s	_	LAND
-0	56	s	_	LAND
+scroll	56	128 - scroll	_	LAND
+0	56	scroll	_	LAND
 
 [LAYER]
 [NAME]
@@ -50,15 +55,16 @@ dino
 [PARAMS]
 number	height
 bool	isLying
-[DEFINE]
-height	0	DINO_STANDING	picShift
+[DEFS]
+shiftedPic	fi_ui_util_shift(DINO_STANDING, height, 0)
 [PARTS]
 [IF]
 isLying
-[GO]
+[PARTS]
 8	48	_	_	DINO_LYING
 [ELSE]
-8	40	_	_	picShift
+[PARTS]
+8	40	_	_	shiftedPic
 
 [LAYER]
 [NAME]
@@ -69,26 +75,27 @@ number	type
 [PARTS]
 [IF]
 type == 0
-[GO]
+[PARTS]
 x	40	_	_	BIRD_HIGH_UP
 [ELIF]
 type == 1
-[GO]
+[PARTS]
 x	40	_	_	BIRD_HIGH_DOWN
 [ELIF]
 type == 2
-[GO]
+[PARTS]
 x	48	_	_	BIRD_LOW_UP
 [ELIF]
 type == 3
+[PARTS]
 X	48	_	_	BIRD_LOW_DOWN
 [ELIF]
 type == 4
-[GO]
+[PARTS]
 x	48	_	_	PLANT_SMALL
 [ELIF]
 type == 5
-[GO]
+[PARTS]
 x	48	_	_	PLANT_BIG
 
 [LAYER]
@@ -96,7 +103,7 @@ x	48	_	_	PLANT_BIG
 score
 [PARAMS]
 number	score
-[DEFINE]
+[DEFS]
 d4	score / 1000
 d3	score / 100 - score / 1000 * 10
 d2	score / 10 - score / 100 * 10
@@ -108,6 +115,7 @@ d1	score - score / 10 * 10
 112	8	_	_	NUMS[d1]
 
 [LAYER]
+[NAME]
 gameOver
 [PARTS]
 0	24	_	_	GAME_OVER_TEXT

@@ -31,26 +31,27 @@ pic = Image.open(picfile)
 
 
 headfile = f'/* THIS FILE IS AUTO GENERATED. DO NOT EDIT. */\n#include <stdint.h>\n#include "system.h"\n\n#ifndef {projname.upper()}_PICS_H\n#define {projname.upper()}_PICS_H\n\n'
-for x, y, w, h, name in info:
-    part = pic.crop((x, y, x + w, y + h))
-    if h % 8 != 0:
-        part = ImageOps.expand(part, (0, 0, 0, 8 - h % 8), fill='white')
-    arr: np.ndarray[bool] = np.array(part)
-    arrs = itertools.batched(arr, 8)
-    arr = [np.array(arr[::-1]).transpose((1, 0)) for arr in arrs]
-    arr = np.concat(arr)
-    arr = arr.flatten()
 
-    values: list[str] = []
-    for i in itertools.batched(arr, 8):
-        values.append(int(''.join(map(str, map(int, i))), 2))
+def gen_resource(x, y, w, h, name):
+        part = pic.crop((x, y, x + w, y + h))
+        if h % 8 != 0:
+            part = ImageOps.expand(part, (0, 0, 0, 8 - h % 8), fill='white')
+        arr: np.ndarray[bool] = np.array(part)
+        arrs = itertools.batched(arr, 8)
+        arr = [np.array(arr[::-1]).transpose((1, 0)) for arr in arrs]
+        arr = np.concat(arr)
+        arr = arr.flatten()
 
-    if 0 < len(values) % 12 < 6:
-        matrix = '\n'.join(' ' * 4 + ', '.join(f'0x{val:02x}' for val in line) + ',' for line in itertools.batched(values, 11))
-    else:
-        matrix = '\n'.join(' ' * 4 + ', '.join(f'0x{val:02x}' for val in line) + ',' for line in itertools.batched(values, 12))
+        values: list[str] = []
+        for i in itertools.batched(arr, 8):
+            values.append(int(''.join(map(str, map(int, i))), 2))
 
-    headfile += f'const uint8_t _{name}_DATA[] = {{\n{matrix}\n}};\nfi_matrix_t {name} = {{_{name}_DATA, {w}, {h}}};\n\n'
+        if 0 < len(values) % 12 < 6:
+            matrix = '\n'.join(' ' * 4 + ', '.join(f'0x{val:02x}' for val in line) + ',' for line in itertools.batched(values, 11))
+        else:
+            matrix = '\n'.join(' ' * 4 + ', '.join(f'0x{val:02x}' for val in line) + ',' for line in itertools.batched(values, 12))
+
+        return f'const uint8_t _{name}_DATA[] = {{\n{matrix}\n}};\nfi_matrix_t {name} = {{_{name}_DATA, {w}, {h}}};\n\n'
 
 headfile += '#endif\n'
 
